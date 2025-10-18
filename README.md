@@ -22,7 +22,7 @@ English | [中文](README_zh.md) -->
 
 **Chart2Code covers three progressively challenging levels:** reproduction, editing, and long-table to chart generation. <br>Level1(<b>Chart Reproduction</b>) reproduces charts from a reference figure and user query; <br>Level2(<b>Chart Editing</b>) involves complex modifications such as changing chart types or adding elements;<br>Level3(<b>Long-Table to Chart Generation</b>) requires models to transform long, information-dense tables into faithful charts following user instructions.
 
-More details about Chart2Code in [project page](https://showlab.github.io/WorldGUI).🌐
+More details about Chart2Code in [project page](https://github.com/CSU-JPG/Chart2Code).🌐
 
 
 
