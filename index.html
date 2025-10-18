@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Chart2Code</title>
+    <meta name="description" content="From charts to code: a hierarchical benchmark for multimodal models" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="icon" href="./assets/logo_2.png" type="image/png">
+    <link rel="shortcut icon" href="favicon_mm.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Pacifico&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@400;500&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" /> <link rel="stylesheet" href="leaderboard.css" /> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-H9XFCMDPNS");
+    </script>
+</head>
+<body>
+    <div class="page-container">
+        <section class="title-section">
+            <div class="content-wrapper title-wrapper">
+                <div class="title-header">
+                    <h1 class="chart2code-title">
+                        <span class="word-chart">Chart</span><span class="word-2">2</span><span class="word-code">Code</span>
+                    </h1>
+                </div>
+                <h2 class="subtitle">From charts to code: a hierarchical benchmark for multimodal models</h2>
+                <div class="authors">
+                    <span class="author-block"><a href="#">Jiahao Tang</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://zhaohengyuan1.github.io/">Henry Hengyuan Zhao</a><sup>2</sup>,</span>
+                    <span class="author-block"><a href="#">Lijian Wu</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="#">Yifei Tao</a><sup>3</sup>,</span>
+                    <span class="author-block"><a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en">Dongxing Mao</a><sup>1</sup>,</span><br>
+                    <span class="author-block"><a href="#">Yang Wan</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://scholar.google.com/citations?user=l18d7kcAAAAJ&hl=en">Jingru Tan</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://minzeng1990.github.io/">Ming Zeng</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=w47WJE4AAAAJ&hl=en">Min Li</a><sup>1</sup>,</span>
+                    <span class="author-block"><a href="https://fingerrec.github.io/">Alex Jinpeng Wang</a><sup>1</sup></span>
+                </div>
+                <div class="affiliations">
+                    <span class="author-block"><sup>1</sup>Central South University,</span>&nbsp;
+                    <span class="author-block"><sup>2</sup>National University of Singapore,</span>&nbsp;
+                    <span class="author-block"><sup>3</sup>Nanyang Technological University,</span>&nbsp;
+                </div>
+
+                <div class="button-group">
+                    <a href="https://arxiv.org/abs/2502.08047"><button class="outline multimodal"><i class="fas fa-file-pdf"></i> Paper&nbsp;</button></a>
+                    <a href="https://github.com/showlab/WorldGUI"><button class="outline multimodal"><i class="fa-brands fa-github"></i> Code&nbsp;</button></a>
+                    <a href="https://huggingface.com/showlab/WorldGUI"><button class="outline multimodal"><i class="fas fa-images"></i> Data&nbsp;</button></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-container">
+            <div class="content-wrapper">
+                <div class="content-box">
+                    <h2 class="text-title">What's new with Chart2Code benchmark</h2>
+                    <p class="text-content">TL;DR: We introduce Chart2Code, a new benchmark designed to evaluate chart generation capabilities of LMMs under progressively challenging conditions. There are five tasks in the Chart2Code benchmark.</p>
+                    <div class="leaderboard-container">
+                        <div class="tabs-container">
+                            <div class="tab-links">
+                                <button class="tab-link active" data-tab="dr-sample">Level 1: Direct Reproduction</button>
+                                <button class="tab-link" data-tab="crd-sample">Level 1: Custom Raw Darta</button>
+                                <button class="tab-link" data-tab="cfd-sample">Level 1: Custom Figure Data</button>
+                                <button class="tab-link" data-tab="level2-sample">Level 2</button>
+                                <button class="tab-link" data-tab="level3-sample">Level 3</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="dr-sample" class="tab-pane active">
+                                    <img src="assets/illustration_DR.png" alt="Direct Reproduction Example" class="tab-image">
+                                </div>
+                                <div id="crd-sample" class="tab-pane">
+                                    <img src="assets/illustration_CRD.png" alt="Customized Raw Data Example" class="tab-image">
+                                </div>
+                                <div id="cfd-sample" class="tab-pane">
+
+                                    <img src="assets/illustration_CFD.png" alt="Customized Figure Data Example" class="tab-image">
+                                </div>
+                                <div id="level2-sample" class="tab-pane">
+                                    <img src="assets/illustration_level2.png" alt="Level 2 Example" class="tab-image">
+                                </div>
+                                <div id="level3-sample" class="tab-pane">
+                                    <img src="assets/illustration_level3.png" alt="Level 3 Example" class="tab-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="text-title">Overview</h2>
+                    <p class="text-content">Chart2Code is a new benchmark for evaluating the chart understanding and code generation capabilities of large multimodal models. Chart2Code is explicitly designed from a user-driven perspective, capturing diverse real-world scenarios and progressively increasing task difficulty.</p>
+                    <img src="assets/figure1.png" class="responsive-image" alt="Chart2Code Overview"/>
+                    <p class="text-content">To our knowledge, Chart2Code is the <b>first hierarchical benchmark</b> that reflects practical chart2code usage while systematically scaling task complexity. It consists of three levels as illustrated in above figure:
+                        <br>Level1(<b>Chart Reproduction</b>) reproduces charts from a reference figure and user query;
+                        <br>Level2(<b>Chart Editing</b>) involves complex modifications such as changing chart types or adding elements;
+                        <br>Level3(<b>Long-Table to Chart Generation</b>) requires models to transform long, information-dense tables into faithful charts following user instructions.
+                    </p>
+
+                    <h2 class="text-title">Data Statistic</h2>
+                    <img src="assets/figure2.png" class="responsive-image" alt="Data Statistics"/>
+                    <p class="text-content">In total, Chart2Code contains 1,947 tasks across 22 chart types, paired with multi-level evaluation metrics that assess both code correctness and the visual fidelity of rendered charts.</p>
+
+                    <h2 class="text-title">Benchmark Comparison</h2>
+                    <img src="assets/figure3.png" class="responsive-image" alt="Benchmark Comparison Table"/>
+                    <p class="text-content text-center">Table 1: Chart2Code is a unique benchmark featuring a more comprehensive set of tasks that better reflect real-world scenarios.</p>
+                    <p class="text-content"><b>Comparison of existing chart-to-code benchmarks.</b>: Chart2Code is a new benchmark designed to rigorously evaluate chart generation capabilities of LMMs under progressively challenging conditions. This hierarchical design reflects real-world usage while progressively increasing difficulty, and its distinctions from prior benchmarks are highlighted in the above table.</p>
+
+                    <h2 class="text-title">Human-Model Performance Comparison</h2>
+
+                    <div class="leaderboard-container">
+                        <div class="tabs-container">
+                            <div class="tab-links">
+                                <button class="tab-link active" data-tab="dr-sample">Level 1: Direct Reproduction</button>
+                                <button class="tab-link" data-tab="crd-sample">Level 1: Custom Raw Darta</button>
+                                <button class="tab-link" data-tab="cfd-sample">Level 1: Custom Figure Data</button>
+                                <button class="tab-link" data-tab="level2-sample">Level 2 Example</button>
+                                <button class="tab-link" data-tab="level3-sample">Level 3 Example</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="dr-sample" class="tab-pane active">
+                                    <img src="assets/human_model_comparison_DR.png" alt="Direct Reproduction Example" class="tab-image">
+                                </div>
+                                <div id="crd-sample" class="tab-pane">
+                                    <img src="assets/human_model_comparison_CRD.png" alt="Customized Raw Data Example" class="tab-image">
+                                </div>
+                                <div id="cfd-sample" class="tab-pane">
+
+                                    <img src="assets/human_model_comparison_CFD.png" alt="Customized Figure Data Example" class="tab-image">
+                                </div>
+                                <div id="level2-sample" class="tab-pane">
+                                    <img src="assets/human_model_comparison_level2.png" alt="Level 2 Example" class="tab-image">
+                                </div>
+                                <div id="level3-sample" class="tab-pane">
+                                    <img src="assets/human_model_comparison_level3.png" alt="Level 3 Example" class="tab-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="leaderboard-container">
+                        <div class="tabs-container">
+                            <div class="tab-links">
+                                <button class="tab-link active" data-tab="level1">Level 1: Chart Reproduction</button>
+                                <button class="tab-link" data-tab="level2">Level 2: Chart Editing</button>
+                                <button class="tab-link" data-tab="level3">Level 3: Long-Table to Chart</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="level1" class="tab-pane active">
+                                    <table class="sortable-table">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2"><strong>Model</strong></th>
+                                                <th colspan="3"><strong>Direct Reproduction(DR)</strong></th>
+                                                <th colspan="3"><strong>Customize Raw Data(CRD)</strong></th>
+                                                <th colspan="3"><strong>Customize Figure Data(CFD)</strong></th>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Exec.Rate</strong></th>
+                                                <th><strong>LLM-Score</strong></th>
+                                                <th><strong>LMM-Score</strong></th>
+                                                <th><strong>Exec.Rate</strong></th>
+                                                <th><strong>LLM-Score</strong></th>
+                                                <th><strong>LMM-Score</strong></th>
+                                                <th><strong>Exec.Rate</strong></th>
+                                                <th><strong>LLM-Score</strong></th>
+                                                <th><strong>LMM-Score</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="group-header"><td colspan="10"><em><strong>Proprietary</strong></em></td></tr>
+                                            <tr><td>Gemini-2.5-Pro</td><td>90.4</td><td>0.6286</td><td>0.3807</td><td><strong>100</strong></td><td><strong>0.6763</strong></td><td>0.2661</td><td>87.04</td><td><strong>0.6145</strong></td><td>0.2214</td></tr>
+                                            <tr><td>Claude-Sonnet-4</td><td><strong>96.38</strong></td><td>0.5629</td><td>0.2553</td><td>97.2</td><td>0.4878</td><td>0.236</td><td>88.89</td><td>0.5538</td><td>0.2273</td></tr>
+                                            <tr><td>GPT-5</td><td>87.48</td><td>0.6334</td><td>0.3575</td><td>94.4</td><td>0.6070</td><td>0.2238</td><td>85.19</td><td>0.6082</td><td>0.2382</td></tr>
+                                            <tr><td>Seed-1.5-VL</td><td>85.81</td><td>0.5536</td><td>0.2341</td><td>97.2</td><td>0.6325</td><td>0.2662</td><td>65.74</td><td>0.5756</td><td>0.1962</td></tr>
+                                            <tr><td>Seed-1.6-VL</td><td>84.70</td><td>0.5237</td><td><strong>0.8117</strong></td><td>94.4</td><td>0.6525</td><td>0.2503</td><td>83.96</td><td>0.5978</td><td>0.2075</td></tr>
+                                            <tr class="group-header"><td colspan="10"><em><strong>Open-Source LMMs (non-thinking)</strong></em></td></tr>
+                                            <tr><td>LLaVA-OV-Qwen2-7B-SI</td><td>32.82</td><td>0.1820</td><td>0.0154</td><td>11.11</td><td>0.4225</td><td>0.1550</td><td>0</td><td>-</td><td>-</td></tr>
+                                            <tr><td>LLaVA-OV-Qwen2-7B-OV</td><td>11.13</td><td>0.2651</td><td>0.0376</td><td>5.56</td><td>0.4213</td><td>0.0825</td><td>0</td><td>-</td><td>-</td></tr>
+                                            <tr><td>DeepSeek-VL-7B</td><td>48.68</td><td>0.2854</td><td>0.0431</td><td>61.11</td><td>0.5374</td><td>0.1114</td><td>10.19</td><td>0.2539</td><td>0.0145</td></tr>
+                                            <tr><td>kimi-VL-A3B</td><td>68.85</td><td>0.4409</td><td>0.1374</td><td>72.22</td><td>0.5887</td><td>0.2081</td><td>61.11</td><td>0.4641</td><td>0.1379</td></tr>
+                                            <tr><td>Qwen2-VL-7B</td><td>64.39</td><td>0.3364</td><td>0.0664</td><td>75.00</td><td>0.5950</td><td>0.1367</td><td>30.56</td><td>0.4235</td><td>0.0519</td></tr>
+                                            <tr><td>Qwen2-VL-72B</td><td>75.66</td><td>0.4368</td><td>0.1207</td><td>80.56</td><td>0.6082</td><td>0.1628</td><td>51.85</td><td>0.5518</td><td>0.1373</td></tr>
+                                            <tr><td>InternVL-2.5-8B</td><td>66.89</td><td>0.3348</td><td>0.0723</td><td>80.56</td><td>0.5712</td><td>0.1183</td><td>37.74</td><td>0.5715</td><td>0.0568</td></tr>
+                                            <tr><td>InternVL-2.5-38B</td><td>86.23</td><td>0.4577</td><td>0.1463</td><td>0</td><td>-</td><td>-</td><td>0</td><td>-</td><td>-</td></tr>
+                                            <tr><td>InternVL-3-8B</td><td>66.34</td><td>0.4371</td><td>0.1389</td><td>86.11</td><td>0.6169</td><td>0.1732</td><td>57.41</td><td>0.4450</td><td>0.1028</td></tr>
+                                            <tr><td>GLM-4V-9B</td><td>72.18</td><td>0.2881</td><td>0.0459</td><td>66.67</td><td>0.5628</td><td>0.1183</td><td>44.74</td><td>0.2904</td><td>0.0130</td></tr>
+                                            <tr><td>Intern-VL-3.5-8B</td><td>66.34</td><td>0.4371</td><td>0.1389</td><td>86.11</td><td>0.6169</td><td>0.1732</td><td>57.41</td><td>0.4450</td><td>0.1028</td></tr>
+                                            <tr><td>MiMo-VL-7B-RL</td><td>37.83</td><td>0.5439</td><td>0.2316</td><td>69.44</td><td>0.6068</td><td>0.2421</td><td>41.67</td><td>0.4962</td><td>0.1407</td></tr>
+                                            <tr><td>MiMo-VL-7B-SFT</td><td>44.65</td><td>0.4959</td><td>0.1983</td><td>69.44</td><td>0.6237</td><td>0.1852</td><td>46.30</td><td>0.5155</td><td>0.1732</td></tr>
+                                            <tr><td>Qwen2.5-VL-7B</td><td>65.64</td><td>0.4197</td><td>0.0994</td><td>75.00</td><td>0.5952</td><td>0.1515</td><td>44.44</td><td>0.5952</td><td>0.0910</td></tr>
+                                            <tr><td>Qwen2.5-VL-72B</td><td>65.36</td><td>0.5118</td><td>0.1893</td><td>100</td><td>0.6273</td><td>0.1989</td><td>37.96</td><td>0.5532</td><td>0.1688</td></tr>
+                                            <tr><td>Molmo-7B-D</td><td>34.77</td><td>0.2164</td><td>0.0943</td><td>4.55</td><td>0.2400</td><td><strong>0.4600</strong></td><td>0.97</td><td>0.0500</td><td><strong>0.4100</strong></td></tr>
+                                            <tr><td>Qwen3-30B</td><td>64.67</td><td>0.5293</td><td>0.2531</td><td>77.78</td><td>0.2546</td><td>0.2368</td><td>70.37</td><td>0.2412</td><td>0.2698</td></tr>
+                                            <tr class="group-header"><td colspan="10"><em><strong>Open-Source LMMs (thinking)</strong></em></td></tr>
+                                            <tr><td>MiMo-VL-7B-RL</td><td>55.77</td><td>0.5261</td><td>0.2294</td><td>69.44</td><td>0.6053</td><td>0.2582</td><td>33.33</td><td>0.5807</td><td>0.2172</td></tr>
+                                            <tr><td>MiMo-VL-7B-SFT</td><td>50.35</td><td><strong>0.6555</strong></td><td>0.2130</td><td>86.11</td><td>0.6644</td><td>0.2248</td><td>38.89</td><td>0.5578</td><td>0.1455</td></tr>
+                                            <tr><td>Qwen3-30B</td><td>45.06</td><td>0.5582</td><td>0.2730</td><td>72.22</td><td>0.3367</td><td>0.3368</td><td>39.81</td><td>0.3185</td><td>0.2780</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="level2" class="tab-pane">
+                                    <table class="sortable-table">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2"><strong>Model</strong></th>
+                                                <th rowspan="2"><strong>Exec.<br>Rate</strong></th>
+                                                <th colspan="9"><strong>Code-Level</strong></th>
+                                                <th rowspan="2"><strong>Chart-Level<br>LMM-Score</strong></th>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Color</strong></th><th><strong>Grid</strong></th><th><strong>Layout</strong></th><th><strong>Legend</strong></th><th><strong>Visual</strong></th><th><strong>Data</strong></th><th><strong>Text</strong></th><th><strong>Type</strong></th><th><strong>LLM-Score</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="group-header"><td colspan="12"><em><strong>Proprietary</strong></em></td></tr>
+                                            <tr><td>Gemini-2.5-Pro</td><td>90.30</td><td><strong>0.6217</strong></td><td><strong>0.8842</strong></td><td><strong>0.9613</strong></td><td><strong>0.5093</strong></td><td><strong>0.5170</strong></td><td><strong>0.7560</strong></td><td>0.6330</td><td><strong>0.9636</strong></td><td><strong>0.5742</strong></td><td>0.2459</td></tr>
+                                            <tr><td>Claude-Sonnet-4</td><td><strong>91.19</strong></td><td>0.5737</td><td>0.8110</td><td>0.9587</td><td>0.4714</td><td>0.4776</td><td>0.6736</td><td>0.5869</td><td>0.9563</td><td>0.5317</td><td>0.2147</td></tr>
+                                            <tr><td>GPT-5</td><td>90.58</td><td>0.5812</td><td>0.8467</td><td>0.9499</td><td>0.4835</td><td>0.4815</td><td>0.7047</td><td>0.6096</td><td>0.9581</td><td>0.5663</td><td><strong>0.2506</strong></td></tr>
+                                            <tr><td>Seed-1.5-VL</td><td>63.17</td><td>0.5106</td><td>0.8230</td><td>0.9538</td><td>0.4408</td><td>0.4582</td><td>0.6983</td><td>0.7166</td><td>0.9400</td><td>0.5126</td><td>0.1975</td></tr>
+                                            <tr><td>Seed-1.6-VL</td><td>72.38</td><td>0.5277</td><td>0.8013</td><td>0.9471</td><td>0.4714</td><td>0.4453</td><td>0.6884</td><td><strong>0.7312</strong></td><td>0.9431</td><td>0.5151</td><td>0.1863</td></tr>
+                                            <tr class="group-header"><td colspan="12"><em><strong>Open-Source LMMs (non-thinking)</strong></em></td></tr>
+                                            <tr><td>LLaVA-OV-Qwen2-7B-SI</td><td>1.19</td><td>0.3507</td><td>0.6964</td><td>0.7833</td><td>0.4074</td><td>0.3002</td><td>0.5249</td><td>0.4871</td><td>0.7889</td><td>0.3157</td><td>0.0875</td></tr>
+                                            <tr><td>LLaVA-OV-Qwen2-7B-OV</td><td>2.57</td><td>0.3163</td><td>0.6013</td><td>0.6863</td><td>0.4488</td><td>0.2030</td><td>0.5685</td><td>0.4928</td><td>0.8154</td><td>0.3512</td><td>0.0366</td></tr>
+                                            <tr><td>DeepSeek-VL-7B</td><td>21.68</td><td>0.2523</td><td>0.6206</td><td>0.7350</td><td>0.2436</td><td>0.1820</td><td>0.4031</td><td>0.4538</td><td>0.7922</td><td>0.2583</td><td>0.0433</td></tr>
+                                            <tr><td>kimi-VL-A3B</td><td>49.5</td><td>0.3901</td><td>0.7270</td><td>0.9074</td><td>0.3411</td><td>0.3196</td><td>0.5724</td><td>0.5913</td><td>0.9033</td><td>0.3701</td><td>0.1039</td></tr>
+                                            <tr><td>Qwen2-VL-7B</td><td>24.95</td><td>0.2846</td><td>0.5825</td><td>0.7711</td><td>0.2723</td><td>0.2385</td><td>0.4693</td><td>0.4883</td><td>0.8141</td><td>0.3181</td><td>0.0780</td></tr>
+                                            <tr><td>Qwen2-VL-72B</td><td>55.05</td><td>0.4013</td><td>0.7704</td><td>0.9044</td><td>0.3464</td><td>0.3345</td><td>0.6086</td><td>0.5744</td><td>0.9098</td><td>0.3928</td><td>0.1140</td></tr>
+                                            <tr><td>InternVL-2.5-8B</td><td>21.29</td><td>0.3341</td><td>0.7002</td><td>0.8362</td><td>0.3148</td><td>0.2955</td><td>0.5421</td><td>0.5530</td><td>0.8536</td><td>0.3344</td><td>0.0869</td></tr>
+                                            <tr><td>InternVL-2.5-38B</td><td>68.22</td><td>0.4544</td><td>0.7902</td><td>0.9405</td><td>0.4146</td><td>0.3745</td><td>0.6334</td><td>0.6361</td><td>0.9338</td><td>0.4311</td><td>0.1367</td></tr>
+                                            <tr><td>InternVL-3-8B</td><td>4.55</td><td>0.3491</td><td>0.5914</td><td>0.9447</td><td>0.3389</td><td>0.3645</td><td>0.5561</td><td>0.5421</td><td>0.8556</td><td>0.3419</td><td>0.0943</td></tr>
+                                            <tr><td>InternVL-3-38B</td><td>67.43</td><td>0.4720</td><td>0.7853</td><td>0.9410</td><td>0.4133</td><td>0.3994</td><td>0.6525</td><td>0.6538</td><td>0.9235</td><td>0.4528</td><td>0.1476</td></tr>
+                                            <tr><td>GLM-4V-9B</td><td>10.69</td><td>0.2011</td><td>0.6910</td><td>0.7794</td><td>0.2357</td><td>0.2196</td><td>0.4604</td><td>0.5003</td><td>0.7472</td><td>0.2953</td><td>0.0770</td></tr>
+                                            <tr><td>Intern-VL-3.5-8B</td><td>27.23</td><td>0.4015</td><td>0.7350</td><td>0.9056</td><td>0.3566</td><td>0.3718</td><td>0.6121</td><td>0.6505</td><td>0.8998</td><td>0.3964</td><td>0.1466</td></tr>
+                                            <tr><td>MiMo-VL-7B-RL</td><td>20.59</td><td>0.4378</td><td>0.8462</td><td>0.9205</td><td>0.4201</td><td>0.4231</td><td>0.6505</td><td>0.6666</td><td>0.9200</td><td>0.4615</td><td>0.1573</td></tr>
+                                            <tr><td>MiMo-VL-7B-SFT</td><td>21.88</td><td>0.4325</td><td>0.7506</td><td>0.8941</td><td>0.3823</td><td>0.4035</td><td>0.6431</td><td>0.6564</td><td>0.9405</td><td>0.4459</td><td>0.1399</td></tr>
+                                            <tr><td>Qwen2.5-VL-7B</td><td>33.36</td><td>0.3524</td><td>0.7374</td><td>0.8592</td><td>0.3296</td><td>0.3302</td><td>0.5944</td><td>0.5780</td><td>0.8887</td><td>0.3603</td><td>0.0974</td></tr>
+                                            <tr><td>Qwen2.5-VL-72B</td><td>71.49</td><td>0.5018</td><td>0.8229</td><td>0.9509</td><td>0.4467</td><td>0.4242</td><td>0.6673</td><td>0.6815</td><td>0.9348</td><td>0.4739</td><td>0.1684</td></tr>
+                                            <tr><td>Molmo-7B-D</td><td>0.99</td><td>0.2471</td><td>0.8152</td><td>0.5636</td><td>0.1000</td><td>0.2275</td><td>0.3477</td><td>0.3082</td><td>0.3476</td><td>0.3488</td><td>0.1347</td></tr>
+                                            <tr><td>Qwen3-30B</td><td>41.39</td><td>0.54</td><td>0.8174</td><td>0.9587</td><td>0.4623</td><td>0.4501</td><td>0.6911</td><td>0.7084</td><td>0.9384</td><td>0.3611</td><td>0.2257</td></tr>
+                                            <tr class="group-header"><td colspan="12"><em><strong>Open-Source LMMs (thinking)</strong></em></td></tr>
+                                            <tr><td>MiMo-VL-7B-RL</td><td>27.62</td><td>0.5076</td><td>0.7560</td><td>0.9449</td><td>0.4109</td><td>0.4379</td><td>0.7006</td><td>0.6859</td><td>0.9446</td><td>0.4819</td><td>0.1737</td></tr>
+                                            <tr><td>MiMo-VL-7B-SFT</td><td>24.16</td><td>0.4562</td><td>0.7404</td><td>0.9286</td><td>0.3686</td><td>0.3980</td><td>0.6812</td><td>0.6617</td><td>0.9385</td><td>0.4496</td><td>0.1774</td></tr>
+                                            <tr><td>Qwen3-30B</td><td>42.38</td><td>0.5213</td><td>0.8248</td><td>0.9549</td><td>0.4718</td><td>0.4453</td><td>0.6924</td><td>0.7046</td><td>0.9403</td><td>0.4947</td><td>0.2362</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div id="level3" class="tab-pane">
+                                    <table class="sortable-table">
+                                        <thead>
+                                            <tr>
+                                                <th rowspan="2"><strong>Model</strong></th>
+                                                <th rowspan="2"><strong>Exec.<br>Rate</strong></th>
+                                                <th colspan="9"><strong>Code-Level</strong></th>
+                                                <th rowspan="2"><strong>Figure-Level<br>LMM-Score</strong></th>
+                                            </tr>
+                                            <tr>
+                                                <th><strong>Color</strong></th><th><strong>Grid</strong></th><th><strong>Layout</strong></th><th><strong>Legend</strong></th><th><strong>Visual</strong></th><th><strong>Data</strong></th><th><strong>Text</strong></th><th><strong>Type</strong></th><th><strong>LLM-Score</strong></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="group-header"><td colspan="12"><em><strong>Proprietary</strong></em></td></tr>
+                                            <tr><td>Gemini-2.5-Pro</td><td>29.33</td><td><strong>0.7276</strong></td><td><strong>0.9733</strong></td><td>1.0000</td><td>0.7727</td><td><strong>0.6701</strong></td><td>0.7880</td><td><strong>0.8291</strong></td><td>0.9470</td><td>0.3516</td><td>0.0361</td></tr>
+                                            <tr><td>Claude-Sonnet-4</td><td><strong>38.00</strong></td><td>0.5676</td><td>0.7963</td><td>1.0000</td><td>0.8148</td><td>0.3731</td><td>0.5881</td><td>0.7175</td><td>0.9062</td><td><strong>0.5125</strong></td><td>0.007</td></tr>
+                                            <tr><td>GPT-5</td><td><strong>38.00</strong></td><td>0.5676</td><td>0.7963</td><td>1.0000</td><td>0.8148</td><td>0.3731</td><td>0.5881</td><td>0.7175</td><td>0.9062</td><td><strong>0.5125</strong></td><td>0.0362</td></tr>
+                                            <tr><td>Seed-1.5-VL</td><td>18.67</td><td>0.7252</td><td>0.8929</td><td>1.0000</td><td><strong>0.8869</strong></td><td>0.5502</td><td>0.7182</td><td>0.7804</td><td><strong>0.9690</strong></td><td>0.0000</td><td><strong>0.0611</strong></td></tr>
+                                            <tr><td>Seed-1.6-VL</td><td>40.00</td><td>0.7030</td><td>0.8833</td><td>1.0000</td><td>0.7972</td><td>0.5396</td><td><strong>0.7956</strong></td><td>0.8128</td><td>0.9244</td><td>0.0000</td><td>0.0547</td></tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-title">Results Analysis</h2>
+                    <img src="assets/figure7.png" class="responsive-image" alt="Correlation of model performance">
+                    <p class="text-content text-center">Correlation of the model performance (i.e., LMM-score) on different manually annotated difficulties (i.e., Easy, Medium, Hard) on Level 1, 2, 3, respectively.</p>
+
+                    <img src="assets/figure8.png" class="responsive-image" alt="Model generalization analysis">
+                    <p class="text-content">Left: Both proprietary and open-source models generalize well on Level 1 and Level 2 tasks when calculating the LLM-score for predicted code assessment. Right: Proprietary models tend to obtain higher LMM-scores on the Level 1 task rather than the Level 2, while open-source models perform poorly on both tasks (scores are lower than 0.5).</p>
+                    
+                    <img src="assets/figure9.png" class="responsive-image" alt="Performance analysis on different task cases">
+                    <p class="text-content text-center">Analysis of model performance on different task cases with LLM-score and LMM-score.</p>
+                    
+                    <h2 class="text-title">Example of Data and Error Cases</h2>
+                    <div class="leaderboard-container">
+                        <div class="tabs-container">
+                            <div class="tab-links">
+                                <button class="tab-link active" data-tab="dr-sample">Level 1: Direct Reproduction</button>
+                                <button class="tab-link" data-tab="crd-sample">Level 1: Custom Raw Darta</button>
+                                <button class="tab-link" data-tab="cfd-sample">Level 1: Custom Figure</button>
+                                <button class="tab-link" data-tab="level2-sample">Level 2 Example</button>
+                                <button class="tab-link" data-tab="level3-sample">Level 3 Example</button>
+                                <button class="tab-link" data-tab="error-cases">Error Cases</button>
+                            </div>
+                            <div class="tab-content">
+                                <div id="dr-sample" class="tab-pane active">
+                                    <h3 class="text-title">An Example of Level 1: Direct Reproduction</h3>
+                                    <img src="assets/DR_sample.png" alt="Direct Reproduction Example" class="tab-image">
+                                </div>
+                                <div id="crd-sample" class="tab-pane">
+                                    <h3 class="text-title">An Example of Level 1: Customized Text-Format Table Data</h3>
+                                    <img src="assets/CRD_sample.png" alt="Customized Raw Data Example" class="tab-image">
+                                </div>
+                                <div id="cfd-sample" class="tab-pane">
+                                    <h3 class="text-title">An Example of Level 1: Figure-Format Table Data</h3>
+                                    <img src="assets/CFD_sample.png" alt="Customized Figure Data Example" class="tab-image">
+                                </div>
+                                <div id="level2-sample" class="tab-pane">
+                                    <h3 class="text-title">An Example of Level 2</h3>
+                                    <img src="assets/level2_sample.png" alt="Level 2 Example" class="tab-image">
+                                </div>
+                                <div id="level3-sample" class="tab-pane">
+                                    <h3 class="text-title">An Example of Level 3</h3>
+                                    <img src="assets/level3_sample.png" alt="Level 3 Example" class="tab-image">
+                                </div>
+                                <div id="error-cases" class="tab-pane">
+                                    <h3 class="text-title">Error Cases Visualization</h3>
+                                    <img src="assets/error_analyse.png" alt="Error Analysis 1" class="tab-image" style="margin-bottom: 20px;">
+                                    <img src="assets/error_analyse_2.png" alt="Error Analysis 2" class="tab-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="text-title">Citation</h2>
+                    <pre id="citation"><code>@misc{zhao2025worldguiinteractivebenchmarkdesktop,
+      title={WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point}, 
+      author={Henry Hengyuan Zhao and Kaiming Yang and Wendi Yu and Difei Gao and Mike Zheng Shou},
+      year={2025},
+      eprint={2502.08047},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2502.08047}, 
+}</code></pre>
+
+                    <p class="acknowledgements">
+                        <b>Acknowledge:</b> Thanks to Carlos & John for this webpage template. Also thanks to the SWE-bench team and their benchmark <a href="https://www.swebench.com/multimodal.html">https://www.swebench.com/multimodal.html</a>.
+                    </p>
+                    <p class="acknowledgements">
+                        <b>Template Usage:</b> If you would like to use this website template for your own leaderboard, please <span style="color:brown">send Carlos & John an email requesting permission.</span> If granted, please make sure to acknowledge the SWE-bench team and link to this leaderboard on the home page of the website.
+                    </p>
+
+                    <div class="logo-group">
+                        <a href="https://www.csu.edu.cn/"><img src="./assets/csu.gif" /></a>
+                        <a href="https://www.nus.edu.sg/"><img src="https://www.nus.edu.sg/images/default-source/base/logo.png" alt="NUS Logo" /></a>
+                        <a href="https://www.ntu.edu.sg//"><img src="./assets/NTU.png" alt="NUS Logo" /></a>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script src="leaderboard.js"></script>
+</body>
+</html>
