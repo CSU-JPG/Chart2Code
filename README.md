@@ -132,14 +132,79 @@ We now support the following models:
     <th>level2</th>
     <th>level3</th>
   </tr>
+   <!-- InternVL 3.5 系列 -->
+  <tr>
+    <td>InternVL-3.5-38B</td>
+    <td>InternVL_3.5_customize_38B</td>
+    <td>InternVL_3.5_direct_38B</td>
+    <td>InternVL_3.5_figure_38B</td>
+    <td>InternVL_3.5_level2_38B</td>
+    <td>InternVL_3.5_level3_38B</td>
+  </tr>
+  <tr>
+    <td>InternVL-3.5-8B</td>
+    <td>InternVL_3.5_customize_8B</td>
+    <td>InternVL_3.5_direct_8B</td>
+    <td>InternVL_3.5_figure_8B</td>
+    <td>InternVL_3.5_level2_8B</td>
+    <td>InternVL_3.5_level3_8B</td>
+  </tr>
+  
+  <!-- InternVL 3 系列 -->
+  <tr>
+    <td>InternVL-3-38B</td>
+    <td>InternVL_3_customize_38B</td>
+    <td>InternVL_3_direct_38B</td>
+    <td>InternVL_3_figure_38B</td>
+    <td>InternVL_3_level2_38B</td>
+    <td>InternVL_3_level3_38B</td>
+  </tr>
+  <tr>
+    <td>InternVL-3-8B</td>
+    <td>InternVL_3_customize_8B</td>
+    <td>InternVL_3_direct_8B</td>
+    <td>InternVL_3_figure_8B</td>
+    <td>InternVL_3_level2_8B</td>
+    <td>InternVL_3_level3_8B</td>
+  </tr>
+  
+  <!-- InternVL 2.5 系列 -->
+  <tr>
+    <td>InternVL-2.5-38B</td>
+    <td>InternVL_2.5_customize_38B</td>
+    <td>InternVL_2.5_direct_38B</td>
+    <td>InternVL_2.5_figure_38B</td>
+    <td>InternVL_2.5_level2_38B</td>
+    <td>InternVL_2.5_level3_38B</td>
+  </tr>
+  <tr>
+    <td>InternVL-2.5-8B</td>
+    <td>InternVL_2.5_customize_8B</td>
+    <td>InternVL_2.5_direct_8B</td>
+    <td>InternVL_2.5_figure_8B</td>
+    <td>InternVL_2.5_level2_8B</td>
+    <td>InternVL_2.5_level3_8B</td>
+  </tr>
+  
+  <!-- Qwen 系列 -->
   <tr>
     <td>Qwen3-VL-30B</td>
-    <td> qwen3_customize_30B</td>
+    <td>qwen3_customize_30B</td>
     <td>qwen3_direct_30B</td>
     <td>qwen3_figure_30B</td>
     <td>qwen3_level2_30B</td>
-      <td>qwen3_level3_30B</td>
+    <td>qwen3_level3_30B</td>
   </tr>
+  <tr>
+    <td>Qwen3-VL-30B-think</td>
+    <td>qwen3_customize_30B_think</td>
+    <td>qwen3_direct_30B_think</td>
+    <td>qwen3_figure_30B_think</td>
+    <td>qwen3_level2_30B_think</td>
+    <td>qwen3_level3_30B_think</td>
+  </tr>
+  
+  <!-- Qwen2.5 系列 -->
   <tr>
     <td>Qwen2.5-VL-72B</td>
     <td>qwen2.5_customize_72B</td>
@@ -149,23 +214,164 @@ We now support the following models:
     <td>qwen2.5_level3_72B</td>
   </tr>
   <tr>
-    <td>InternVL-3.5-38B</td>
-      <td>InternVL_customize_38B</td>
-      <td>InternVL_direct_38B</td>
-      <td>InternVL_figure_38B</td>
-      <td>InternVL_level2_38B</td>
-      <td>InternVL_level3_38B</td>
+    <td>Qwen2.5-VL-7B</td>
+    <td>qwen2.5_customize_7B</td>
+    <td>qwen2.5_direct_7B</td>
+    <td>qwen2.5_figure_7B</td>
+    <td>qwen2.5_level2_7B</td>
+    <td>qwen2.5_level3_7B</td>
   </tr>
-    <tr>
-    <td>InternVL-3.5-8B</td>
-      <td>InternVL_customize_8B</td>
-      <td>InternVL_direct_8B</td>
-      <td>InternVL_figure_8B</td>
-      <td>InternVL_level2_8B</td>
-      <td>InternVL_level3_8B</td>
+  
+  <!-- Qwen2 系列 -->
+  <tr>
+    <td>Qwen2-VL-72B</td>
+    <td>qwen2_customize_72B</td>
+    <td>qwen2_direct_72B</td>
+    <td>qwen2_figure_72B</td>
+    <td>qwen2_level2_72B</td>
+    <td>qwen2_level3_72B</td>
+  </tr>
+  <tr>
+    <td>Qwen2-VL-7B</td>
+    <td>qwen2_customize_7B</td>
+    <td>qwen2_direct_7B</td>
+    <td>qwen2_figure_7B</td>
+    <td>qwen2_level2_7B</td>
+    <td>qwen2_level3_7B</td>
+  </tr>
+  
+  <!-- MOLMO 系列 -->
+  <tr>
+    <td>MOLMO-7B-D</td>
+    <td>molmo_customize_7BD</td>
+    <td>molmo_direct_7BD</td>
+    <td>molmo_figure_7BD</td>
+    <td>molmo_level2_7BD</td>
+    <td>molmo_level3_7BD</td>
+  </tr>
+  
+  <!-- MIMO 系列 -->
+  <tr>
+    <td>MIMO-VL-7B-RL-think</td>
+    <td>mimo_RL_customize_think</td>
+    <td>mimo_RL_direct_think</td>
+    <td>mimo_RL_figure_think</td>
+    <td>mimo_RL_level2_think</td>
+    <td>mimo_RL_level3_think</td>
+  </tr>
+  <tr>
+    <td>MIMO-VL-7B-RL-nothink</td>
+    <td>mimo_RL_customize_nothink</td>
+    <td>mimo_RL_direct_nothink</td>
+    <td>mimo_RL_figure_nothink</td>
+    <td>mimo_RL_level2_nothink</td>
+    <td>mimo_RL_level3_nothink</td>
+  </tr>
+  <tr>
+    <td>MIMO-VL-7B-SFT-nothink</td>
+    <td>mimo_SFT_customize_nothink</td>
+    <td>mimo_SFT_direct_nothink</td>
+    <td>mimo_SFT_figure_nothink</td>
+    <td>mimo_SFT_level2_nothink</td>
+    <td>mimo_SFT_level3_nothink</td>
+  </tr>
+  <tr>
+    <td>MIMO-VL-7B-SFT-think</td>
+    <td>mimo_SFT_customize_think</td>
+    <td>mimo_SFT_direct_think</td>
+    <td>mimo_SFT_figure_think</td>
+    <td>mimo_SFT_level2_think</td>
+    <td>mimo_SFT_level3_think</td>
+  </tr>
+  
+  <!-- LLaVA 系列 -->
+  <tr>
+    <td>LLaVA-OV-Qwen2-7B-OV</td>
+    <td>llava_ov_customize</td>
+    <td>llava_ov_direct</td>
+    <td>llava_ov_figure</td>
+    <td>liava_ov_level2</td>
+    <td>llava_ov_level3</td>
+  </tr>
+  <tr>
+    <td>LLaVA-OV-Qwen2-7B-SI</td>
+    <td>llava_si_customize</td>
+    <td>llava_si_direct</td>
+    <td>llava_si_figure</td>
+    <td>llava_si_level2</td>
+    <td>llava_si_level3</td>
+  </tr>
+  
+  <!-- SEED 系列 -->
+  <tr>
+    <td>SEED-1.6-VL</td>
+    <td>seed_1.6_customize</td>
+    <td>seed_1.6_direct</td>
+    <td>seed_1.6_figure</td>
+    <td>seed_1.6_level2</td>
+    <td>seed_1.6_level3</td>
+  </tr>
+  <tr>
+    <td>SEED-1.5-VL</td>
+    <td>seed_1.5_customize</td>
+    <td>seed_1.5_direct</td>
+    <td>seed_1.5_figure</td>
+    <td>seed_1.5_level2</td>
+    <td>seed_1.5_level3</td>
+  </tr>
+  
+  <!-- 其他模型 -->
+  <tr>
+    <td>Claude-Sonnet-4</td>
+    <td>claude_customize</td>
+    <td>claude_direct</td>
+    <td>claude_figure</td>
+    <td>claude_level2</td>
+    <td>claude_level3</td>
+  </tr>
+  <tr>
+    <td>DeepSeek-VL-7B</td>
+    <td>deepseek_customize</td>
+    <td>deepseek_direct</td>
+    <td>deepseek_figure</td>
+    <td>deepseek_level2</td>
+    <td>deepseek_level3</td>
+  </tr>
+  <tr>
+    <td>Gemini-2.5-Pro</td>
+    <td>gemini_2.5_customize</td>
+    <td>gemini_2.5_direct</td>
+    <td>gemini_2.5_figure</td>
+    <td>gemini_2.5_level2</td>
+    <td>gemini_2.5_level3</td>
+  </tr>
+  <tr>
+    <td>GLM-4V-9B</td>
+    <td>glm_customize</td>
+    <td>glm_direct</td>
+    <td>glm_figure</td>
+    <td>glm_level2</td>
+    <td>glm_level3</td>
+  </tr>
+  <tr>
+    <td>GPT-5</td>
+    <td>gpt_5_customize</td>
+    <td>gpt_5_direct</td>
+    <td>gpt_5_figure</td>
+    <td>gpt_5_level2</td>
+    <td>gpt_5_level3</td>
+  </tr>
+  <tr>
+    <td>Kimi-VL-A3B</td>
+    <td>kimi_customize</td>
+    <td>kimi_direct</td>
+    <td>kimi_figure</td>
+    <td>kimi_level2</td>
+    <td>kimi_level3</td>
   </tr>
 </table>
 </details>
+
 
 ### Evaluate Setup
 
@@ -187,17 +393,11 @@ bash LMM_evaluator.sh
 
 
 ## ❤ Acknowledgement
-- Special thanks to [Difei Gao](https://scholar.google.com/citations?user=No9OsocAAAAJ&hl=en) for his hard work on devleoping the codebase.
+- Special thanks to Henry Hengyuan Zhao for serving as the Project Leader of this paper.
 
-- We express our great thanks to Kaiming Yang, Mingyi Yan, Wendi Yu for their hard work for data ananotation and baseline testing.
+- We are grateful to Lijian Wu and Ziyuan Zhen for their hard work in data annotation and baseline testing.
 
-- [OOTB (Computer Use)](https://github.com/showlab/computer_use_ootb?tab=readme-ov-file): Computer Use OOTB is an out-of-the-box (OOTB) solution for Desktop GUI Agent, including API-based (Claude 3.5 Computer Use) and locally-running models (ShowUI, UI-TARS).
-
-- [ShowUI](https://github.com/showlab/ShowUI): Open-source, End-to-end, Lightweight, Vision-Language-Action model for GUI Agent & Computer Use.
-
-- [AssistGUI](https://arxiv.org/pdf/2312.13108): AssistGUI is the first work that focuses on desktop productivity software usage with over 100 realistic GUI tasks.
-
-- [VideoGUI](https://github.com/showlab/videogui): A Benchmark for GUI Automation from Instructional Videos. Can a GUI agent behave like a human when giving an image-style effect and a user query?
+- We also extend our appreciation to Mao Dongxing, Yifei Tao, Lijian Wu, and Wan Yang for their contributions to this work.
 
 
 - [SWE-bench Multimodal](https://www.swebench.com/multimodal.html): SWE-bench Multimodal is a dataset for evaluating AI systems on visual software engineering tasks.
@@ -220,5 +420,5 @@ If you find WorldGUI useful, please cite using this BibTeX:
 
 
 ## 🔔 Contact
-If you have any questions or suggestions, please don't hesitate to let us know. You can directly email [Henry Hengyuan Zhao](https://zhaohengyuan1.github.io/) at NUS using the email address hubylidayuan@gmail.com, or post an issue on this repository. We welcome contributions. Feel free to submit pull requests if you have suggestions for improvement.
+If you have any questions or suggestions, please don't hesitate to let us know. You can directly email Jiahao Tang at tangjh36@mail2.sysu.edu.cn or post an issue on this repository. We welcome contributions. Feel free to submit pull requests if you have suggestions for improvement.
 
