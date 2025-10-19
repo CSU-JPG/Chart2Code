@@ -1,0 +1,378 @@
+/* --- General Page & Title Styles --- */
+body {
+    background-color: #f4f7f6;
+}
+
+.page-container {
+    padding-bottom: 50px;
+}
+
+.title-section {
+    background: white;
+    background-blend-mode: multiply;
+}
+
+.title-wrapper {
+    flex-direction: column;
+}
+
+.title-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+/* 主容器：负责定位、字体和光效 */
+.chart2code-title {
+    font-family: 'Lobster', cursive;
+    font-size: 80px;
+    padding-top: 0.2em;
+    font-weight: normal;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+.logo-image {
+    /* Set a height for the logo. It will scale proportionally. */
+    /* 80px is a good starting point to match your font size. */
+    height: 80px; 
+    width: auto; /* Ensures the width scales to maintain aspect ratio */
+}
+/* 为标题的每个部分应用“双重动画”，并设置更平滑的默认速度 */
+.word-chart, .word-2, .word-code {
+    display: inline-block;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: 400% 400%;
+    
+    /* 动画1：渐变色内部流动 | 动画2：整体颜色循环变化 */
+    /* 关键改动：将动画速度放慢，效果更优雅 */
+    animation: 
+        gradient-flow 12s ease-in-out infinite,
+        hue-cycle 10s linear infinite;
+}
+
+/* 第一部分 "Chart" 的专属颜色：更丰富的冷色调 */
+.word-chart {
+    background-image: linear-gradient(
+        60deg, 
+        #0047AB, /* Cobalt Blue */
+        #3a86ff, /* Dodger Blue */
+        #8338ec, /* Vibrant Purple */
+        #A020F0, /* Pure Purple */
+        #5185d4, /* Indigo */
+        #7f4ea3, /* Darker Indigo */
+        #9b59b6, /* Amethyst */
+        #0047AB  /* Cobalt Blue (to create a seamless loop) */
+    );
+    /* 为每个部分设置不同的动画时长，增加视觉复杂性 */
+    animation-duration: 1s, 2s;
+}
+
+/* 中间部分 "2" 的专属颜色：更精致的高亮色 */
+.word-2 {
+    background-image: linear-gradient(
+        60deg, 
+        #FFFFFF, /* White */
+        #F0F2F5, /* Light Silver */
+        #FFFACD, /* Lemon Chiffon (Light Gold) */
+        #FFD700, /* Gold */
+        #FFFACD, /* Lemon Chiffon (Light Gold) */
+        #F0F2F5, /* Light Silver */
+        #ced1d4, /* Light Silver */
+        #FFFFFF  /* White (for seamless loop) */
+    );
+    /* 渐变流动更快，但颜色循环最慢，形成对比 */
+    animation-duration: 2s, 3s;
+}
+
+/* 第三部分 "Code" 的专属颜色：更丰富的暖色调 */
+.word-code {
+    background-image: linear-gradient(
+        60deg, 
+        #FFD700, /* Gold */
+        #ffbe0b, /* Sunglow Yellow */
+        #fb5607, /* Vibrant Orange */
+        #ff006e, /* Neon Pink */
+        #ff3f5c, /* Coral Red */
+        #ff2b2b, /* Red */
+        #E63946, /* Imperial Red */
+        #FFD700  /* Gold (for seamless loop) */
+    );
+    animation-duration: 3s, 4s;
+}
+
+
+/* 创建扫光效果的覆盖层 (保持不变) */
+.chart2code-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(
+        60deg, 
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.05) 40%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.05) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    animation: shine-effect 5s linear infinite; /* 扫光也稍微放慢一点 */
+    z-index: 2;
+}
+
+/* === 动画定义 (Keyframes) === */
+
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shine-effect {
+    0% { left: -150%; }
+    100% { left: 150%; }
+}
+
+@keyframes hue-cycle {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
+}
+/* leaderboard.css */
+.subtitle {
+    font-family: 'Inter', sans-serif; /* 使用您选择的 Inter 字体 */
+    color: #2F4F4F;
+    text-align: center;
+    font-size: 38px;      /* Inter 字体结构清晰，这个尺寸效果很好 */
+    font-weight: 500;     /* 500 是一个理想的 Medium 粗细 */
+    margin-top: -1.2em;
+    line-height: 1.5;
+    letter-spacing: -0.5px; /* Inter 字体在较大尺寸下稍微收紧字间距会更美观 */
+}
+.authors {
+    font-family: 'Playfair Display', serif; /* 替换 'Raleway' */
+    font-size: 22px; /* 建议稍微增大字号以突出细节 */
+    font-weight: 500; /* Medium weight 看起来更清晰 */
+    margin-top: 3.5em;
+    text-align: center;
+    color: #2F4F4F;
+}
+.authors a {
+    color: inherit; /* 继承 .authors 定义的 #2F4F4F 颜色 */
+    text-decoration: none; /* 移除默认的下划线 */
+    transition: color 0.3s ease; /* 添加一个平滑的颜色过渡效果 */
+}
+
+/* 鼠标悬停时的作者链接样式 */
+.authors a:hover {
+    color: #0056b3; /* 鼠标悬停时变为深蓝色，与你的表格标题颜色呼应 */
+    text-decoration: underline; /* 鼠标悬停时显示下划线，作为可点击的视觉提示 */
+}
+.affiliations {
+    font-family: 'Lora', serif; /* 经典的衬线正文字体 */
+    font-size: 20px;
+    margin-top: 1em;
+    font-style: italic;
+    text-align: center;
+    color: #2F4F4F;
+}
+
+.button-group {
+    margin-top: 1em;
+}
+
+/* --- Main Content & Image Styles --- */
+.text-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;      /* 增大字号，使其成为视觉焦点 */
+    font-weight: 700;     /* 使用 Bold 粗细增加冲击力 */
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.5em;
+    letter-spacing: -0.5px; /* 微调字间距，更显精致 */
+}
+
+.text-content {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #4A4A4A;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.responsive-image {
+    width: 100%;
+    margin: auto;
+    margin-top: 0.5em;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- Tabs Component Styles --- */
+.leaderboard-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 2em auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.tabs-container {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tab-links {
+    display: flex;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-link {
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    transition: background-color 0.3s, color 0.3s;
+    flex-grow: 1;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-link:hover {
+    background-color: #e0e0e0;
+    color: #000;
+}
+
+.tab-link.active {
+    background-color: #fff;
+    color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.tab-content {
+    padding: 25px;
+    overflow-x: auto;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.tab-image {
+    width: 100%;
+    margin: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+/* --- Sortable Table Styles --- */
+table.sortable-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.sortable-table th, .sortable-table td {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+}
+
+.sortable-table thead th {
+    background-color: #007bff;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.sortable-table thead th[colspan] {
+    cursor: default;
+}
+
+.sortable-table thead th[colspan]:hover {
+    background-color: #007bff; /* Prevents hover color change */
+}
+
+.sortable-table thead th:not([colspan]):hover {
+    background-color: #0056b3;
+}
+
+.sortable-table thead th:not([colspan]) {
+    padding-right: 25px;
+}
+
+.sortable-table thead th:not([colspan])::after {
+    content: ' \2195'; /* Unicode for up-down arrow */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.sortable-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.sortable-table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+.sortable-table tr.group-header td {
+    background-color: #e9ecef;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.sortable-table strong {
+    font-weight: 700;
+}
+
+/* --- Citation & Footer Styles --- */
+#citation {
+    border-color: #2F4F4F;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.acknowledgements {
+    line-height: 1.6667em;
+}
+
+.logo-group {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0.5em;
+}
+
+.logo-group a img {
+    height: 3em;
+    padding-top: 0.5em;
+    padding-right: 1em;
+}
