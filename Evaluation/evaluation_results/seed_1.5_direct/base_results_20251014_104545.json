@@ -1,0 +1,23 @@
+{
+  "evaluation_info": {
+    "timestamp": "2025-10-14T10:45:49.207775",
+    "generation_directory": "Chart2Code/Evaluation/execute_results/seed_1.5_direct",
+    "gt_source_file": "Chart2Code/data/level1_direct.json",
+    "total_files_evaluated": 3
+  },
+  "success_rate": {
+    "count": 3,
+    "total": 3,
+    "rate": 1.0
+  },
+  "average_f1_scores_on_success": {
+    "color_f1": 0.4662,
+    "grid_f1": 1.0,
+    "layout_f1": 1.0,
+    "legend_f1": 0.0,
+    "parameter_data_f1": 0.0476,
+    "parameter_visual_f1": 0.5305,
+    "text_f1": 0.6713,
+    "type_f1": 0.8889
+  }
+}
