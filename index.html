@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <link rel="icon" href="./assets/logo_2.png" type="image/png">
+    <link rel="icon" href="https://github.com/CSU-JPG/Chart2Code.github.io/assets/logo_2.png" type="image/png">
     <link rel="shortcut icon" href="favicon_mm.ico" type="image/x-icon" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,9 @@
     
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/styles.css" /> <link rel="stylesheet" href="leaderboard.css" /> <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/leaderboard.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -60,8 +62,8 @@
 
                 <div class="button-group">
                     <a href="https://arxiv.org/abs/2502.08047"><button class="outline multimodal"><i class="fas fa-file-pdf"></i> Paper&nbsp;</button></a>
-                    <a href="https://github.com/showlab/WorldGUI"><button class="outline multimodal"><i class="fa-brands fa-github"></i> Code&nbsp;</button></a>
-                    <a href="https://huggingface.com/showlab/WorldGUI"><button class="outline multimodal"><i class="fas fa-images"></i> Data&nbsp;</button></a>
+                    <a href="https://github.com/CSU-JPG/Chart2Code"><button class="outline multimodal"><i class="fa-brands fa-github"></i> Code&nbsp;</button></a>
+                    <a href=""><button class="outline multimodal"><i class="fas fa-images"></i> Data&nbsp;</button></a>
                 </div>
             </div>
         </section>
@@ -82,27 +84,27 @@
                             </div>
                             <div class="tab-content">
                                 <div id="dr-sample" class="tab-pane active">
-                                    <img src="assets/illustration_DR.png" alt="Direct Reproduction Example" class="tab-image">
+                                    <img src="./assets/illustration_DR.png" alt="Direct Reproduction Example" class="tab-image">
                                 </div>
                                 <div id="crd-sample" class="tab-pane">
-                                    <img src="assets/illustration_CRD.png" alt="Customized Raw Data Example" class="tab-image">
+                                    <img src="./assets/illustration_CRD.png" alt="Customized Raw Data Example" class="tab-image">
                                 </div>
                                 <div id="cfd-sample" class="tab-pane">
 
-                                    <img src="assets/illustration_CFD.png" alt="Customized Figure Data Example" class="tab-image">
+                                    <img src="./assets/illustration_CFD.png" alt="Customized Figure Data Example" class="tab-image">
                                 </div>
                                 <div id="level2-sample" class="tab-pane">
-                                    <img src="assets/illustration_level2.png" alt="Level 2 Example" class="tab-image">
+                                    <img src="./assets/illustration_level2.png" alt="Level 2 Example" class="tab-image">
                                 </div>
                                 <div id="level3-sample" class="tab-pane">
-                                    <img src="assets/illustration_level3.png" alt="Level 3 Example" class="tab-image">
+                                    <img src="./assets/illustration_level3.png" alt="Level 3 Example" class="tab-image">
                                 </div>
                             </div>
                         </div>
                     </div>
                     <h2 class="text-title">Overview</h2>
                     <p class="text-content">Chart2Code is a new benchmark for evaluating the chart understanding and code generation capabilities of large multimodal models. Chart2Code is explicitly designed from a user-driven perspective, capturing diverse real-world scenarios and progressively increasing task difficulty.</p>
-                    <img src="assets/figure1.png" class="responsive-image" alt="Chart2Code Overview"/>
+                    <img src="./assets/figure1.png" class="responsive-image" alt="Chart2Code Overview"/>
                     <p class="text-content">To our knowledge, Chart2Code is the <b>first hierarchical benchmark</b> that reflects practical chart2code usage while systematically scaling task complexity. It consists of three levels as illustrated in above figure:
                         <br>Level1(<b>Chart Reproduction</b>) reproduces charts from a reference figure and user query;
                         <br>Level2(<b>Chart Editing</b>) involves complex modifications such as changing chart types or adding elements;
@@ -110,11 +112,11 @@
                     </p>
 
                     <h2 class="text-title">Data Statistic</h2>
-                    <img src="assets/figure2.png" class="responsive-image" alt="Data Statistics"/>
+                    <img src="./assets/figure2.png" class="responsive-image" alt="Data Statistics"/>
                     <p class="text-content">In total, Chart2Code contains 2,023 tasks across 22 chart types, paired with multi-level evaluation metrics that assess both code correctness and the visual fidelity of rendered charts.</p>
 
                     <h2 class="text-title">Benchmark Comparison</h2>
-                    <img src="assets/figure3.png" class="responsive-image" alt="Benchmark Comparison Table"/>
+                    <img src="./assets/figure3.png" class="responsive-image" alt="Benchmark Comparison Table"/>
                     <p class="text-content text-center">Table 1: Chart2Code is a unique benchmark featuring a more comprehensive set of tasks that better reflect real-world scenarios.</p>
                     <p class="text-content"><b>Comparison of existing chart-to-code benchmarks.</b>: Chart2Code is a new benchmark designed to rigorously evaluate chart generation capabilities of LMMs under progressively challenging conditions. This hierarchical design reflects real-world usage while progressively increasing difficulty, and its distinctions from prior benchmarks are highlighted in the above table.</p>
 
@@ -363,7 +365,7 @@
             </div>
         </section>
     </div>
-    
-    <script src="leaderboard.js"></script>
+
+    <script src="css/leaderboard.js"></script>
 </body>
 </html>

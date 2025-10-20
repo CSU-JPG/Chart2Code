@@ -1,14 +1,15 @@
-<p align="center" style="margin:0"><img src="./assets/logo2.png" alt="agent" style="width: 45%" /></p>
+<p align="center" style="margin:0"><img src="./assets/logo2.png" alt="agent" style="width: 45%" /></p>\
 <h2 align="center">From charts to code: a hierarchical benchmark for multimodal models</h2>
+
 <h5 align="center"> 
 Welcome to Chart2Code! If you find this repo useful, please give a star ⭐ for encouragement.
 </h5>
+
 <h5 align="center"> 
 <!-- 
 English | [中文](README_zh.md) -->
 
-[![arXiv](https://img.shields.io/badge/ArXiv-2502.08047-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2502.08047)  [![Project Page](https://img.shields.io/badge/Project_Page-WorldGUI-white?color=7289DA)](https://showlab.github.io/WorldGUI) [![Project Page](https://img.shields.io/badge/Github-AwesomeGUI-blue)](https://github.com/showlab/Awesome-GUI-Agent)
-
+[![arXiv](https://img.shields.io/badge/arXiv-2502.08047-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.08047) [![Project Page](https://img.shields.io/badge/Project_Page-Chart2Code-7289DA?style=for-the-badge&logo=githubpages&logoColor=white)](https://csu-jpg.github.io/Chart2Code.github.io/) [![Code](https://img.shields.io/badge/Code-Chart2Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CSU-JPG/Chart2Code) [![Hugging Face Dataset](https://img.shields.io/badge/Dataset-Chart2Code-FFB22B?style=for-the-badge&logo=huggingface&logoColor)](https://huggingface.co/datasets/CSU-JPG/Chart2Code)
 </h5>
 
 
@@ -20,7 +21,7 @@ English | [中文](README_zh.md) -->
 
 **Chart2Code covers three progressively challenging levels:** reproduction, editing, and long-table to chart generation. <br>Level1(<b>Chart Reproduction</b>) reproduces charts from a reference figure and user query; <br>Level2(<b>Chart Editing</b>) involves complex modifications such as changing chart types or adding elements;<br>Level3(<b>Long-Table to Chart Generation</b>) requires models to transform long, information-dense tables into faithful charts following user instructions.
 
-More details about Chart2Code in [project page](https://github.com/CSU-JPG/Chart2Code).🌐
+More details about Chart2Code in [project page](https://csu-jpg.github.io/Chart2Code.github.io/).🌐
 
 
 
@@ -43,14 +44,12 @@ OPENAI_API_URL=${your_api_proxy_provider_url}
 ARK_BASE_URL=${your_ark_api_base_url}
 ```
 ### Download Data
-Download the Chart2Code data from [Huggingface](https://huggingface.co/datasets/hhenryz/Chart2Code-Benchmark) and unzip it under the root directory.
+Download the Chart2Code data from [Huggingface](https://huggingface.co/datasets/CSU-JPG/Chart2Code) and unzip it under the root directory.
 ```shell
 cd data
-wget https://huggingface.co/datasets/hhenryz/Chart2Code-Benchmark/resolve/main/Chart2Code-Benchmark.zip
-unzip Chart2Code-Benchmark.zip
+wget https://huggingface.co/datasets/CSU-JPG/Chart2Code/tree/main/data.zip
+unzip data.zip
 cd ..
-
-
 ```
 The file structure should be like this:
 ```Chart2Code
