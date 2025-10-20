@@ -1,4 +1,4 @@
-<p align="center" style="margin:0"><img src="./assets/logo2.png" alt="agent" style="width: 45%" /></p>\
+<p align="center" style="margin:0"><img src="./assets/logo2.png" alt="agent" style="width: 45%" /></p>
 <h2 align="center">From charts to code: a hierarchical benchmark for multimodal models</h2>
 
 <h5 align="center"> 
