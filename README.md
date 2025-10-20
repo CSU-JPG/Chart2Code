@@ -396,9 +396,6 @@ bash LMM_evaluator.sh
 
 - We also extend our appreciation to Mao Dongxing, Yifei Tao, Lijian Wu, and Wan Yang for their contributions to this work.
 
-
-- [SWE-bench Multimodal](https://www.swebench.com/multimodal.html): SWE-bench Multimodal is a dataset for evaluating AI systems on visual software engineering tasks.
-
 ## 🎓 BibTeX
 
 If you find WorldGUI useful, please cite using this BibTeX:
