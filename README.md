@@ -9,7 +9,7 @@ Welcome to Chart2Code! If you find this repo useful, please give a star ⭐ for 
 <!-- 
 English | [中文](README_zh.md) -->
 
-[![arXiv](https://img.shields.io/badge/arXiv-2502.08047-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2502.08047) [![Project Page](https://img.shields.io/badge/Project_Page-Chart2Code-7289DA?style=for-the-badge&logo=githubpages&logoColor=white)](https://csu-jpg.github.io/Chart2Code.github.io/) [![Code](https://img.shields.io/badge/Code-Chart2Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CSU-JPG/Chart2Code) [![Hugging Face Dataset](https://img.shields.io/badge/Dataset-Chart2Code-FFB22B?style=for-the-badge&logo=huggingface&logoColor)](https://huggingface.co/datasets/CSU-JPG/Chart2Code)
+[![arXiv](https://img.shields.io/badge/arXiv-2502.08047-B31B1B?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2510.17932v1) [![Project Page](https://img.shields.io/badge/Project_Page-Chart2Code-7289DA?style=for-the-badge&logo=githubpages&logoColor=white)](https://csu-jpg.github.io/Chart2Code.github.io/) [![Code](https://img.shields.io/badge/Code-Chart2Code-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CSU-JPG/Chart2Code) [![Hugging Face Dataset](https://img.shields.io/badge/Dataset-Chart2Code-FFB22B?style=for-the-badge&logo=huggingface&logoColor)](https://huggingface.co/datasets/CSU-JPG/Chart2Code)
 </h5>
 
 
