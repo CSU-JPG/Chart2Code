@@ -385,7 +385,7 @@ bash LMM_evaluator.sh
 ```
 ## 📢 Update
 
-* [2025.02.13] We release the Chart2Code in [arxiv](https://arxiv.org/abs/2510.17932v1).
+* [2025.10.22] We release the Chart2Code in [arxiv](https://arxiv.org/abs/2510.17932v1).
 
 
 ## ❤ Acknowledgement
