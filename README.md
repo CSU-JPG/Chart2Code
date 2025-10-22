@@ -46,8 +46,7 @@ ARK_BASE_URL=${your_ark_api_base_url}
 ### Download Data
 Download the Chart2Code data from [Huggingface](https://huggingface.co/datasets/CSU-JPG/Chart2Code) and unzip it under the root directory.
 ```shell
-cd data
-wget https://huggingface.co/datasets/CSU-JPG/Chart2Code/tree/main/data.zip
+wget https://huggingface.co/datasets/CSU-JPG/Chart2Code/resolve/main/data.zip
 unzip data.zip
 cd ..
 ```
@@ -386,7 +385,7 @@ bash LMM_evaluator.sh
 ```
 ## 📢 Update
 
-* [2025.02.13] We release the Chart2Code in [arxiv](https://arxiv.org/abs/2502.08047).
+* [2025.02.13] We release the Chart2Code in [arxiv](https://arxiv.org/abs/2510.17932v1).
 
 
 ## ❤ Acknowledgement
@@ -401,18 +400,13 @@ bash LMM_evaluator.sh
 If you find WorldGUI useful, please cite using this BibTeX:
 
 ```bibtex
-@misc{zhao2025worldguiinteractivebenchmarkdesktop,
-      title={WorldGUI: An Interactive Benchmark for Desktop GUI Automation from Any Starting Point}, 
-      author={Henry Hengyuan Zhao and Kaiming Yang and Wendi Yu and Difei Gao and Mike Zheng Shou},
+@misc{tang2025chartscodehierarchicalbenchmark,
+      title={From Charts to Code: A Hierarchical Benchmark for Multimodal Models}, 
+      author={Jiahao Tang and Henry Hengyuan Zhao and Lijian Wu and Yifei Tao and Dongxing Mao and Yang Wan and Jingru Tan and Min Zeng and Min Li and Alex Jinpeng Wang},
       year={2025},
-      eprint={2502.08047},
+      eprint={2510.17932},
       archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2502.08047}, 
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2510.17932}, 
 }
 ```
-
-
-## 🔔 Contact
-If you have any questions or suggestions, please don't hesitate to let us know. You can directly email Jiahao Tang at tangjh36@mail2.sysu.edu.cn or post an issue on this repository. We welcome contributions. Feel free to submit pull requests if you have suggestions for improvement.
-
