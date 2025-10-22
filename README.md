@@ -48,7 +48,6 @@ Download the Chart2Code data from [Huggingface](https://huggingface.co/datasets/
 ```shell
 wget https://huggingface.co/datasets/CSU-JPG/Chart2Code/resolve/main/data.zip
 unzip data.zip
-cd ..
 ```
 The file structure should be like this:
 ```Chart2Code
