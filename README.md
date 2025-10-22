@@ -385,7 +385,7 @@ bash LMM_evaluator.sh
 ```
 ## 📢 Update
 
-* [2025.10.22] We release the Chart2Code in [arxiv](https://arxiv.org/abs/2510.17932v1).
+* [2025.10.22] We release our paper in [arxiv](https://arxiv.org/abs/2510.17932v1).
 
 
 ## ❤ Acknowledgement
@@ -397,7 +397,7 @@ bash LMM_evaluator.sh
 
 ## 🎓 BibTeX
 
-If you find WorldGUI useful, please cite using this BibTeX:
+If you find ChartCode useful, please cite using this BibTeX:
 
 ```bibtex
 @misc{tang2025chartscodehierarchicalbenchmark,
