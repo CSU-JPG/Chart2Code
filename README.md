@@ -31,7 +31,9 @@ Here we provide a quick start guide to evaluate LMMs on Chart2Code.
 ### Setup Environment
 ```shell
 git clone https://github.com/showlab/Chart2Code.git
-conda env create -f environment.yaml
+conda env create -f environment.yaml # This environment can be used for inference with all models except for Qwen3 and Molmo.
+# For Qwen3-VL inference, you should install the environment from the official Qwen3-VL repository https://github.com/QwenLM/Qwen3-VL. 
+# For Molmo, we recommend first installing TensorFlow with `python -m pip install "tensorflow==2.17.*"` before following the installation instructions in the official repository https://github.com/allenai/molmo.
 conda activate chart2code
 cd Chart2Code
 ```
