@@ -395,13 +395,6 @@ bash LMM_evaluator.sh
 * [2025.10.22] We release our paper in [arxiv](https://arxiv.org/abs/2510.17932).
 
 
-## ❤ Acknowledgement
-- Special thanks to Henry Hengyuan Zhao for serving as the Project Leader of this paper.
-
-- We are grateful to Lijian Wu and Ziyuan Zhen for their hard work in data annotation and baseline testing.
-
-- We also extend our appreciation to Mao Dongxing, Yifei Tao, Lijian Wu, and Wan Yang for their contributions to this work.
-
 ## 🎓 BibTeX
 
 If you find ChartCode useful, please cite using this BibTeX:
