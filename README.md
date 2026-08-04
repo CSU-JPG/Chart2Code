@@ -399,13 +399,11 @@ bash LMM_evaluator.sh
 If you find ChartCode useful, please cite using this BibTeX:
 
 ```bibtex
-@misc{tang2025chartscodehierarchicalbenchmark,
-      title={From Charts to Code: A Hierarchical Benchmark for Multimodal Models}, 
-      author={Jiahao Tang and Henry Hengyuan Zhao and Lijian Wu and Yifei Tao and Dongxing Mao and Yang Wan and Jingru Tan and Min Zeng and Min Li and Alex Jinpeng Wang},
-      year={2025},
-      eprint={2510.17932},
-      archivePrefix={arXiv},
-      primaryClass={cs.SE},
-      url={https://arxiv.org/abs/2510.17932}, 
-}
+@inproceedings{tang2026charts,
+  title={From charts to code: A hierarchical benchmark for multimodal models},
+  author={Tang, Jiahao and Zhao, Henry Hengyuan and Wu, Lijian and Zhang, Zijian and Tao, Yifei and Mao, Dongxing and Wan, Yang and Tan, Jingru and Zeng, Min and Li, Min and others},
+  booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={13467--13566},
+  year={2026}
+}   
 ```
