@@ -17,14 +17,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&family=Pacifico&family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@400;500&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@400;500&family=Lora:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/leaderboard.css" />
+    <link rel="stylesheet" href="css/leaderboard.css?v=20260722-charxiv-header8" />
+    <link rel="stylesheet" href="css/failure-cases.css?v=20260715-font2" />
+    <style>
+        html,
+        body,
+        section,
+        .page-container,
+        .title-section,
+        .main-container,
+        .content-wrapper,
+        .content-box,
+        .failure-case-section {
+            background: #ffffff !important;
+            background-color: #ffffff !important;
+        }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9XFCMDPNS"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -37,29 +52,30 @@
     <div class="page-container">
         <section class="title-section">
             <div class="content-wrapper title-wrapper">
-                <div class="title-header">
-                    <h1 class="chart2code-title">
-                        <span class="word-chart">Chart</span><span class="word-2">2</span><span class="word-code">Code</span>
-                    </h1>
-                </div>
-                <h2 class="subtitle">From Charts to Code: A Hierarchical Benchmark for Multimodal Models</h2>
+                <h2 class="subtitle"><span class="subtitle-gradient">From Charts to Code</span>: A Hierarchical Benchmark for Multimodal Models</h2>
                 <div class="authors">
-                    <span class="author-block"><a href="#">Jiahao Tang</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="https://zhaohengyuan1.github.io/">Henry Hengyuan Zhao</a><sup>2</sup>,</span>
-                    <span class="author-block"><a href="#">Lijian Wu</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="#">Yifei Tao</a><sup>3</sup>,</span>
-                    <span class="author-block"><a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en">Dongxing Mao</a><sup>1</sup>,</span><br>
-                    <span class="author-block"><a href="#">Yang Wan</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="https://scholar.google.com/citations?user=l18d7kcAAAAJ&hl=en">Jingru Tan</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="https://minzeng1990.github.io/">Min Zeng</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=w47WJE4AAAAJ&hl=en">Min Li</a><sup>1</sup>,</span>
-                    <span class="author-block"><a href="https://fingerrec.github.io/">Alex Jinpeng Wang</a><sup>1</sup></span>
+                    <span class="author-line">
+                        <span class="author-block"><a href="#">Jiahao Tang</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://zhaohengyuan1.github.io/">Henry Hengyuan Zhao</a><sup>2</sup>,</span>
+                        <span class="author-block"><a href="#">Lijian Wu</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="#">Zijian Zhang</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="#">Yifei Tao</a><sup>3</sup>,</span>
+                        <span class="author-block"><a href="https://scholar.google.com/citations?user=RLVSYY0AAAAJ&hl=en">Dongxing Mao</a><sup>1</sup>,</span>
+                    </span>
+                    <span class="author-line">
+                        <span class="author-block"><a href="#">Yang Wan</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://scholar.google.com/citations?user=l18d7kcAAAAJ&hl=en">Jingru Tan</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://minzeng1990.github.io/">Min Zeng</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://scholar.google.com.hk/citations?user=w47WJE4AAAAJ&hl=en">Min Li</a><sup>1</sup>,</span>
+                        <span class="author-block"><a href="https://fingerrec.github.io/">Alex Jinpeng Wang</a><sup>1</sup></span>
+                    </span>
                 </div>
                 <div class="affiliations">
-                    <span class="author-block"><a href="https://github.com/CSU-JPG"><sup>1</sup>CSU-JPG, </a>Central South University,</span>&nbsp;
-                    <span class="author-block"><sup>2</sup>National University of Singapore,</span>&nbsp;
-                    <span class="author-block"><sup>3</sup>Nanyang Technological University,</span>&nbsp;
+                    <span class="author-block"><a href="https://github.com/CSU-JPG"><sup>1</sup>CSU-JPG, </a>Central South University</span>
+                    <span class="author-block"><sup>2</sup>National University of Singapore</span>&nbsp;<br>
+                    <span class="author-block"><sup>3</sup>Nanyang Technological University</span>
                 </div>
+                <div class="conference-badge">ACL 2026 Main</div>
 
                 <div class="button-group">
                     <a href="https://arxiv.org/abs/2510.17932"><button class="outline multimodal"><i class="fas fa-file-pdf"></i> Paper&nbsp;</button></a>
@@ -72,7 +88,7 @@
         <section class="main-container">
             <div class="content-wrapper">
                 <div class="content-box">
-                    <h2 class="text-title">What's new with Chart2Code benchmark</h2>
+                    <!-- <h2 class="text-title">What's new with Chart2Code benchmark</h2>
                     <p class="text-content">TL;DR: We introduce Chart2Code, a new benchmark designed to evaluate chart generation capabilities of LMMs under progressively challenging conditions. There are five tasks in the Chart2Code benchmark.</p>
                     <div class="leaderboard-container">
                         <div class="tabs-container">
@@ -102,9 +118,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <h2 class="text-title">Overview</h2>
-                    <p class="text-content">Chart2Code is a new benchmark for evaluating the chart understanding and code generation capabilities of large multimodal models. Chart2Code is explicitly designed from a user-driven perspective, capturing diverse real-world scenarios and progressively increasing task difficulty.</p>
+                    <p class="text-content">Chart2Code is a new benchmark for evaluating the chart understanding and code generation capabilities of large multimodal models. <br>It's explicitly designed from a user-driven perspective, capturing diverse real-world scenarios and progressively increasing task difficulty.</p>
                     <img src="./assets/figure1.png" class="responsive-image" alt="Chart2Code Overview"/>
                     <p class="text-content">To our knowledge, Chart2Code is the <b>first hierarchical benchmark</b> that reflects practical chart2code usage while systematically scaling task complexity. It consists of three levels as illustrated in above figure:
                         <br>Level1(<b>Chart Reproduction</b>) reproduces charts from a reference figure and user query;
@@ -338,18 +354,18 @@
                         </div>
                     </div>
 
-                    <h2 class="text-title">Citation</h2>
-                    <pre id="citation"><code>
-@misc{tang2025chartscodehierarchicalbenchmark,
-    title={From Charts to Code: A Hierarchical Benchmark for Multimodal Models}, 
-    author={Jiahao Tang and Henry Hengyuan Zhao and Lijian Wu and Yifei Tao and Dongxing Mao and Yang Wan and Jingru Tan and Min Zeng and Min Li and Alex Jinpeng Wang},
-    year={2025},
-    eprint={2510.17932},
-    archivePrefix={arXiv},
-    primaryClass={cs.SE},
-    url={https://arxiv.org/abs/2510.17932}, 
-}
+                    <section id="failure-case-analysis" class="failure-case-section">
+                        <div id="failure-case-gallery"></div>
+                    </section>
 
+                    <h2 class="text-title">Citation</h2>
+                    <pre id="citation"><code>@inproceedings{tang2026charts,
+  title={From charts to code: A hierarchical benchmark for multimodal models},
+  author={Tang, Jiahao and Zhao, Henry Hengyuan and Wu, Lijian and Zhang, Zijian and Tao, Yifei and Mao, Dongxing and Wan, Yang and Tan, Jingru and Zeng, Min and Li, Min and others},
+  booktitle={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
+  pages={13467--13566},
+  year={2026}
+}   
 </code></pre>
 
                     <p class="acknowledgements">
@@ -371,5 +387,6 @@
     </div>
 
     <script src="css/leaderboard.js"></script>
+    <script src="css/failure-cases.js?v=20260715-font2"></script>
 </body>
 </html>
