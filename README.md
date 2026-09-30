@@ -392,7 +392,7 @@ bash LMM_evaluator.sh
 
 - We are grateful to Lijian Wu, Zijian Zhang and Ziyuan Zhen for their hard work in data annotation, data clean and baseline testing.
 
-- We also extend our appreciation to Mao Dongxing, Yifei Tao, Lijian Wu, Zijian Zhang and Wan Yang for their contributions to this work.
+- We also extend our appreciation to Dongxing Mao, Yifei Tao, Lijian Wu, Zijian Zhang and Wan Yang for their contributions to this work.
 
 ## 🎓 BibTeX
 
